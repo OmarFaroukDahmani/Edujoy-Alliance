@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #95b8f5;        /* Light Blue */
+  --secondary-color: #e7f1ff;       /* Very Light Blue */
+  --text-color: #7096d1;          /* Medium Blue/Gray */
+  --bold-text-color: #081f5c;     /* Dark Navy Blue */
+  --background-color: #f8fafd;     /* Very Light Gray/Blue */
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+h1, h2, h3 {
+  margin: 0.5em 0;
+  font-weight: 700;
+  color: var(--bold-text-color);
+}
+p {
+  margin: 0.5em 0 1em;
+  line-height: 1.6;
+}
+.title {
+  text-align: center;
+  color: var(--bold-text-color);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 5px 0 3rem; 
+}
+
+
+/*HERO SECTION*/
+.main {
+  height: 80vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.home_content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+}
+.home_content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--bold-text-color);
+  margin-bottom: 0.5rem;
+}
+.home_content p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--bold-text-color);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+.home_content button {
+  padding: 1rem 3rem;
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 8px 15px rgba(8, 31, 92, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+@keyframes button-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.home_content button {
+  animation-name: button-bounce;
+  animation-duration: 2s; 
+  animation-timing-function: ease-in-out; 
+  animation-iteration-count: infinite; 
+}
+.home_content button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(8, 31, 92, 0.5);
+  background-color: #1a429b;
+}
+
+.home_content button a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ABOUT SECTION */
+.about_content {
+  padding: 6rem 1.5rem;
+  background-color: var(--background-color);
+}
+.about.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--secondary-color);
+}
+.about img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid var(--primary-color);
+  box-shadow: 0 0 0 12px var(--secondary-color);
+}
+.about_text {
+  padding: 1rem;
+  max-width: 650px;
+}
+.about_text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+.about_text p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: justify;
+}
+.about_text span {
+  color: var(--bold-text-color);
+  font-weight: 900;
+}
+
+/* ========== TEAM SECTION (.team) ========== */
+.team {
+  padding: 6rem 1.5rem;
+  background-color: var(--secondary-color);
+}
+.responsive-container-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card-container {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(8, 31, 92, 0.15);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 6px solid var(--primary-color);
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(8, 31, 92, 0.25);
+}
+.team-image-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+}
+.team-member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bold-text-color);
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bold-text-color);
+  margin-bottom: 0.25rem;
+}
+.position {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.feature-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #5d7aae;
+  min-height: 40px; 
+  line-height: 1.4;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.linkedin-icon, .facebook-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.linkedin-icon:hover, .facebook-icon:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* ========== EVENTS SECTION (.our-events) ========== */
+.our-events {
+    padding: 6rem 1.5rem;
+    text-align: center;
+}
+.our-events p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+.marquee-demo {
+    overflow: hidden;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+    margin-top: 2rem;
+}
+.marquee-text {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 25s linear infinite; /* Increased duration for smoother scroll */
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
+    padding: 0 100%; 
+}
+.marquee-text span {
+    color: var(--bold-text-color);
+    margin: 0 3rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* ========== CONTACT SECTION (.contact_content) ========== */
+.contact_content {
+  padding: 6rem 1.5rem;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+.contact_content .title {
+    margin-bottom: 1rem;
+}
+.contact_content p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.contact_info, .contact_phone {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 15px rgba(8, 31, 92, 0.08);
+  transition: transform 0.3s;
+}
+.contact_info:hover, .contact_phone:hover {
+    transform: translateY(-5px);
+}
+.contact_info h2, .contact_phone h2 {
+  font-size: 1.6rem;
+  color: var(--bold-text-color);
+  margin-bottom: 0.75rem;
+}
+.contact_info p, .contact_phone p {
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+.map {
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+  border: 0;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
+}
+
+
+/* ========== MEDIA QUERIES (RESPONSIVENESS) ========== */
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: row;
+    }
+    .navbar-links {
+        margin-top: 0;
+    }
+
+    /* About Section */
+    .about.parent {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+        padding: 4rem;
+        text-align: left;
+    }
+    .about_text {
+        max-width: 50%;
+    }
+    .about img {
+        flex-shrink: 0;
+    }
+    
+    /* Contact Section */
+    .contact {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+    .contact_info, .contact_phone {
+        flex: 1;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .title {
+        font-size: 2rem;
+    }
+    .about.parent {
+        padding: 1.5rem;
+    }
+    .about img {
+        width: 180px;
+        height: 180px;
+    }
+    .about_text h2 {
+        font-size: 1.5rem;
+    }
+    .about_text p {
+        font-size: 1rem;
+    }
+    .marquee-text {
+        font-size: 1rem;
+    }
+    .marquee-text span {
+        font-size: 1.2rem;
+    }
+}
