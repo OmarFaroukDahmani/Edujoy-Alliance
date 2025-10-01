@@ -1,15 +1,14 @@
-import { cn } from "@/lib/utils";
 import Marquee from "react-fast-marquee";
 import '../style/events.css'
 
 const reviews = [
-  { name: "Congrès du Festival international du film de sensibilisation à la santé", img: "/event1.jpg" },
-  { name: "Fomration PNL", img: "/event2.jpg" },
-  { name: "EduJoy Chess Master", img: "/event3.jpg" },
-  { name: "EduJoy Chess Master", img: "/event4.jpg" },
-  { name: "EduJoy Chess Master", img: "/event5.jpg" },
-  { name: "Anniversaire EduJoy", img: "/event6.jpg" },
-  { name: "Iftar Collectif", img: "/event7.jpg" },
+  { name: "International Health Awareness Film Festival", img: "/events/event1.jpg" },
+  { name: "NLP Training", img: "/events/event2.jpg" },
+  { name: "EduJoy Chess Master", img: "/events/event3.jpg" },
+  { name: "EduJoy Chess Master", img: "/events/event4.jpg" },
+  { name: "EduJoy Chess Master", img: "/events/event5.jpg" },
+  { name: "EduJoy Birthday", img: "/events/event6.jpg" },
+  { name: "Collective Iftar", img: "/events/event7.jpg" },
 ];
 
 const ReviewCard = ({ img, name }) => (

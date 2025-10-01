@@ -1,11 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import logo from "../../public/logo.png";
-import linkedin from "../assets/inkedin_icon.svg";
-import omar from "../assets/omar.jpg";
-import assil from "../assets/assil.jpeg";
-import heni from "../assets/heni.jpeg";
-import fahmi from "../assets/fahmi.jpg";
+import logo from "/logo.png";
+
 
 import "../style/home.css";
 import { MarqueeDemo } from "../components/Marquee";
@@ -13,28 +9,28 @@ import { MarqueeDemo } from "../components/Marquee";
 export default function Home() {
   const teamMembers = [
         {
-          img: omar,
+          img: "/team/omar.jpg",
           alt: "Omar",
           name: "Omar Farouk Dahmani",
           position: "President",
           quote: "If you want it, just get it.",
         },
         {
-          img: assil,
+          img: "/team/assil.jpeg",
           alt: "Assil",
           name: "Assil Ben Kamel",
           position: "Vice-President",
           quote: "Yes we can.",
         },
         {
-          img: fahmi,
+          img: "/team/fahmi.jpg",
           alt: "Fahmi",
           name: "Fahmi Zarrougi",
           position: "Founder",
           quote: "Think, Treat then do.",
         },
         {
-          img: heni,
+          img: "/team/heni.jpeg",
           alt: "Heni",
           name: "Heni Bahrouni",
           position: "Communications Manager",
