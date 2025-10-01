@@ -11,6 +11,37 @@ import "../style/home.css";
 import { MarqueeDemo } from "../components/Marquee";
 
 export default function Home() {
+  const teamMembers = [
+        {
+          img: omar,
+          alt: "Omar",
+          name: "Omar Farouk Dahmani",
+          position: "President",
+          quote: "If you want it, just get it.",
+        },
+        {
+          img: assil,
+          alt: "Assil",
+          name: "Assil Ben Kamel",
+          position: "Vice-President",
+          quote: "Yes we can.",
+        },
+        {
+          img: fahmi,
+          alt: "Fahmi",
+          name: "Fahmi Zarrougi",
+          position: "Founder",
+          quote: "Think, Treat then do.",
+        },
+        {
+          img: heni,
+          alt: "Heni",
+          name: "Heni Bahrouni",
+          position: "Communications Manager",
+          quote:
+            "The future belongs to those who believe in the beauty of their dreams.",
+        },
+      ]
   return (
     <>
       <Navbar />
@@ -55,122 +86,25 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="team">
-        <div className="responsive-container-block container">
-          <p className="title team-head-text">Our Team</p>
-          <div className="responsive-container-block">
-            {/* Member 1 */}
-            <div className="responsive-cell-block card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img className="team-member-image" src={omar} alt="Omar" />
-                </div>
-                <p className="name">Omar Farouk Dahmani</p>
-                <p className="position">President</p>
-                <p className="feature-text">If you want it, just get it.</p>
-                <div className="social-icons">
-                  <a
-                    href="https://www.linkedin.com/in/omar-farouk-dahmani-b3a480334/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="linkedin-icon" src={linkedin} alt="LinkedIn" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="facebook-icon"
-                      src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg"
-                      alt="Facebook"
-                    />
-                  </a>
-                </div>
-              </div>
+<section id="team" className="team">
+    <p className="title team-head-text">Our Team</p>
+    <div className="responsive-container-block">
+{teamMembers.map((member, i) => (
+        <div key={i} className="responsive-cell-block card-container">
+          <div className="card">
+            <div className="team-image-wrapper">
+              <img className="team-member-image" src={member.img} alt={member.alt} />
             </div>
-
-            {/* Member 2 */}
-            <div className="responsive-cell-block card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img className="team-member-image" src={assil} alt="Assil" />
-                </div>
-                <p className="name">Assil Ben Kamel</p>
-                <p className="position">Vice-President</p>
-                <p className="feature-text">Yes we can.</p>
-                <div className="social-icons">
-                  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <img className="linkedin-icon" src={linkedin} alt="LinkedIn" />
-                  </a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                      className="facebook-icon"
-                      src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg"
-                      alt="Facebook"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Member 3 */}
-            <div className="responsive-cell-block card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src={fahmi}
-                    alt="Fahmi"
-                  />
-                </div>
-                <p className="name">Fahmi Zarrougi</p>
-                <p className="position">Founder</p>
-                <p className="feature-text">Think, Treat then do.</p>
-                <div className="social-icons">
-                  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <img className="linkedin-icon" src={linkedin} alt="LinkedIn" />
-                  </a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                      className="facebook-icon"
-                      src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg"
-                      alt="Facebook"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Member 4 */}
-            <div className="responsive-cell-block card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img className="team-member-image" src={heni} alt="Heni" />
-                </div>
-                <p className="name">Heni Bahrouni</p>
-                <p className="position">Communications Manager</p>
-                <p className="feature-text">
-                  The future belongs to those who believe in the beauty of their dreams.
-                </p>
-                <div className="social-icons">
-                  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                    <img className="linkedin-icon" src={linkedin} alt="LinkedIn" />
-                  </a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                      className="facebook-icon"
-                      src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg"
-                      alt="Facebook"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
+            <p className="name">{member.name}</p>
+            <p className="position">{member.position}</p>
+            <p className="feature-text">{member.quote}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+</section>
+  
+      
       <section id="events" className="our-events">
         <h1 className="title">Our Events</h1>
         <p>We create the best events!</p>
