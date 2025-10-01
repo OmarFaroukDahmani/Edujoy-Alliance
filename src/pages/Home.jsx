@@ -12,14 +12,14 @@ export default function Home() {
           img: "/team/omar.jpg",
           alt: "Omar",
           name: "Omar Farouk Dahmani",
-          position: "President",
+          position: "Vice-President",
           quote: "If you want it, just get it.",
         },
         {
           img: "/team/assil.jpeg",
           alt: "Assil",
           name: "Assil Ben Kamel",
-          position: "Vice-President",
+          position: "President",
           quote: "Yes we can.",
         },
         {
