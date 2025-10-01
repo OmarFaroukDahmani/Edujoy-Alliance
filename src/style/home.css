@@ -296,7 +296,7 @@ p {
   100% { transform: translate(-100%, 0); }
 }
 
-/* ========== CONTACT SECTION ========== */
+/* CONTACT SECTION */
 .contact_content {
   padding: 6rem 1.5rem;
   text-align: center;
@@ -326,6 +326,7 @@ p {
   flex: 1;
   padding: 2rem;
   background: white;
+  text-align: center;
   border-radius: 1.5rem;
   box-shadow: 0 8px 15px rgba(8, 31, 92, 0.08);
   transition: transform 0.3s;
